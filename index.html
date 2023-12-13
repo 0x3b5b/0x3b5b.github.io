@@ -99,7 +99,7 @@
 	<body>
 		<div id=header>
 			<div id=tab_container>
-				<img src="logo.png" alt="chadwick logo" style="height:55px;">
+				<img src="logo.png"alt="chadwick logo"style="height:55px;">
 				<div onclick="switchTab('homepage')">Home</div>
 				<div class=dropdown onclick="showPages()">Pages
 					<div id=page_list class=pg_cn>
@@ -153,10 +153,10 @@
 		</div>
 		<div id=aboutpage class=page>
 			<div class=ct_cnt>
-				<div id=ct1_text class=content_text>
+				<div id=abr_text class=content_text>
 					About Page
 				</div>
-				<div id=ct1_img class=content_img>
+				<div id=abt_img class=content_img>
 					img
 				</div>
 			</div>
@@ -166,27 +166,27 @@ function getById(id){
 	return document.getElementById(id);
 }
 function getByClass(id){
-	return document.getElementsByClassName(id);
+	return Array.from(document.getElementsByClassName(id));
 }
 let windowWidth;
-function percentToPixel(el,p,type){
-	let desired=p/100*windowWidth;
+function percentToPixel(el,p,t){
+	let n=p/100*windowWidth;
 	if(typeof el=="string")
-	getById(el).style[type]=desired+"px";
-	else el.style[type]=desired+"px";
+	getById(el).style[t]=n+"px";
+	else el.style[t]=n+"px";
 }
 function update(){
 	windowWidth=parseFloat(window.getComputedStyle(header).getPropertyValue("width"));
-	Array.from(getByClass("content_text")).forEach(e=>percentToPixel(e,65,"width"))
-	Array.from(getByClass("ct_cnt")).forEach(e=>percentToPixel(e,85,"width"))
-	Array.from(getByClass("content_img")).forEach(e=>percentToPixel(e,35,"width"))
+	getByClass("content_text").forEach(e=>percentToPixel(e,65,"width"))
+	getByClass("content_img").forEach(e=>percentToPixel(e,35,"width"))
+	getByClass("ct_cnt").forEach(e=>percentToPixel(e,85,"width"))
 	requestAnimationFrame(update)
 }
 update()
 let currentTab="homepage";
 switchTab(currentTab)
 function switchTab(tab){
-	Array.from(getByClass("page")).forEach(e=>e.id!=tab&&(e.style.display="none"))
+	getByClass("page").forEach(e=>e.style.display="none")
 	getById(tab).style.display="block"
 }
 function showPages(){
@@ -194,7 +194,7 @@ function showPages(){
 }
 window.onclick=e=>{
 	let d=getByClass("pg_cn");
-	if(!e.target.matches(".dropdown"))for(let i=0,opd=d[i];i<d.length;i++,opd=d[i])if(opd.classList.contains("show"))opd.classList.remove("show");
+	if(!e.target.matches(".dropdown"))d.forEach(e=>e.classList.contains("show")&&e.classList.remove("show"));
 }
 		</script>
 	</body>
