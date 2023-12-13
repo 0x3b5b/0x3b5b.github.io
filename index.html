@@ -5,9 +5,7 @@
 		<meta name="viewport"content="width=device-width,initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat"rel="stylesheet">
 		<style>
-			*{
-				font-family:"Montserrat";
-			}
+			*{font-family:"Montserrat"}
 			body{margin:0 0}
 			div#header{
 				position:-webkit-sticky;
@@ -43,12 +41,8 @@
 				background:none;
 				background:#071c2e;
 			}
-			div#tab_container>div:hover{
-				background:#103452;
-			}
-			div.page{
-				padding:25px;
-			}
+			div#tab_container>div:hover{background:#103452}
+			div.page{padding:25px}
 			div.ct_cnt{
 				border:2px solid #ddd;
 				width:80%;
@@ -68,7 +62,7 @@
 				border-radius:2.5px;
 				box-shadow:0px 8px 16px 0px rgba(0,0,0,.2);
 				z-index:1;
-				offset-position:80px 125px;
+				offset-position:80px 145px;/*65 +20x*/
 				offset-anchor:center;
 				offset-path:ray(90deg);
 			}
@@ -86,9 +80,7 @@
 				padding-top:5px;
 				padding-left:5px;
 			}
-			div.content_img{
-				padding-top:5px;
-			}
+			div.content_img{padding-top:5px}
 		</style>
 	</head>
 	<body>
@@ -101,6 +93,7 @@
 						<a onclick="switchTab('page1')">Page 1</a>
 						<a onclick="switchTab('page2')">Page 2</a>
 						<a onclick="switchTab('page3')">Page 3</a>
+						<a onclick="switchTab('page4')">Page 4</a>
 					</div>
 				</div>
 				<div onclick="switchTab('aboutpage')">About</div>
@@ -142,6 +135,16 @@
 					Page 3
 				</div>
 				<div id=p3_img class=content_img>
+					img
+				</div>
+			</div>
+		</div>
+		<div id=page4 class=page>
+			<div class=ct_cnt>
+				<div id=p4_text class=content_text>
+					Page 3
+				</div>
+				<div id=p4_img class=content_img>
 					img
 				</div>
 			</div>
