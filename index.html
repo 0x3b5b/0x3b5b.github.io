@@ -64,7 +64,7 @@
 				border-radius:2.5px;
 				box-shadow:0px 8px 16px 0px rgba(0,0,0,.2);
 				z-index:1;
-				offset-position:80px 145px;/*65+20x, x=pagecount*/
+				offset-position:80px 195px;/*65+20x , x=pagecount, if p takes 2 lines +10*/
 				offset-anchor:center;
 				offset-path:ray(90deg);
 			}
@@ -84,7 +84,7 @@
 			}
 			div.content_img{padding-top:5px}
 			ul.bullets>li{padding:5px}
-			img#hmpgt{
+			img.title_img{
 				z-index:-1;
 				position:relative;
 				height:min-content;
@@ -100,9 +100,10 @@
 				<div class=dropdown onclick="showPages()">Pages
 					<div id=page_list class=pg_cn>
 						<a onclick="switchTab('page1')">PAGBIBIGAY-PUGAY</a>
-						<a onclick="switchTab('page2')">Page 2</a>
-						<a onclick="switchTab('page3')">Page 3</a>
-						<a onclick="switchTab('page4')">Page 4</a>
+						<a onclick="switchTab('page2')">KALAYAAN</a>
+						<a onclick="switchTab('page3')">HANDOG NG KALAYAAN</a>
+						<a onclick="switchTab('page4')">KATAPAT NG KALAYAAN</a>
+						<a onclick="switchTab('page5')">KONKLUSYON</a>
 					</div>
 				</div>
 				<div onclick="switchTab('aboutpage')">About</div>
@@ -110,9 +111,9 @@
 		</div>
 		<div id=homepage class=page>
 			<div class=ct_cnt>
-				<img id=hmpgt src="homepage.jpeg"/>
+				<img class=title_img src="homepage.jpeg"/>
 				<div class=flexbox>
-					<div class=content_text>
+					<div class=content_text data-p="100">
 						<h1 class=title>Iangat Ang Buhay! Ang Kapangyarihan Ng Kalayaan Laban Sa Paghihirap</h1>
 						<span id=ct1_text>
 							Bilang mga estudyante at indibidwal na naninirahan sa Pilipinas, napakahalagang kilalanin natin ang tindi ng kahirapan sa ating bansa. Ayon sa Philippine Statistics Authority (PSA), gayundin sa iba pang kagalang-galang na mga mapagkukunan, ang antas ng kahirapan sa Pilipinas ay nasa pinakamataas na antas. Noong 2022, humigit-kumulang 19.7 milyong Pilipino ang nabubuhay sa ibaba ng linya ng kahirapan, na ginagawang isa ang antas ng kahirapan sa bansa sa pinakamataas sa rehiyon. Malinaw na ito ay isang seryosong isyu na dapat nating bigyang pansin bilang isang lipunan.<br></br>
@@ -122,14 +123,12 @@
 							Malinaw na ang pagtugon sa estado ng kahirapan sa Pilipinas ay isang mapaghamong gawain, ngunit isa ito na dapat nating gampanan upang magkaroon ng positibong epekto sa ating lipunan. Sa pagtutulungan at pagtuunan ng pansin ang mga bagay na aming nabanggit, makakalikha tayo ng mas maliwanag at mas maunlad na kinabukasan para sa lahat ng Pilipino.
 						</span>
 					</div>
-					<div id=ct1_img class=content_img>
-						img
-					</div>
 				</div>
 			</div>
 		</div>
 		<div id=page1 class=page>
 			<div class=ct_cnt>
+				<img class=title_img src="page1.jpeg"/>
 				<div class=flexbox>
 					<div class=content_text>
 						<h1 class=title></h1>
@@ -145,6 +144,7 @@
 		</div>
 		<div id=page2 class=page>
 			<div class=ct_cnt>
+				<img class=title_img src="page2.jpeg"/>
 				<div class=flexbox>
 					<div class=content_text>
 						<h1 class=title></h1>
@@ -179,55 +179,49 @@
 							Ang Pilipinas ay nalantad sa mas maraming natural na sakuna kaysa sa ibang bansa sa mundo. Ang mga sakuna na ito, na kinabibilangan ng mga bagyo, lindol at bagyo, ay nagdudulot ng kakila-kilabot na pagkawasak at nakakatulong nang malaki sa mataas na antas ng kahirapan sa bansang ito. Ang iba pang dahilan ng kahirapan sa Pilipinas ay ang mababang paglikha ng trabaho, mababang paglago ng ekonomiya at mataas na antas ng paglaki ng populasyon.<br></br>
 							Sa bawat 1,000 sanggol na ipinanganak sa Pilipinas, 28 ang namamatay bago sila maging 5 taong gulang. Marami sa mga batang ito ang namamatay sa pulmonya. Ang Pilipinas ay isa sa 15 bansa na bumubuo ng higit sa 75% ng mga pagkamatay ng pneumonia sa buong mundo.<br></br>
 							
-							Ang mas mababang katayuang sosyo-ekonomiko, na kadalasang humahantong sa limitadong pribilehiyo sa mga pagbabakuna at mga opsyon sa pangangalagang pangkalusugan, ay nag-aambag sa mataas na rate ng pneumonia na ito.<br></br>
-							Noong 2019, tinatayang 64% ng mga sambahayang Pilipino ang nahihirapan sa kawalan ng pagkain, at dalawa sa bawat 10 batang wala pang 5 taong gulang ay kulang sa timbang. Ang mataas na bilang ng mga natural na sakuna at malaking bilang ng mga taong naninirahan sa mga rural na lugar ay nag-aambag sa problemang ito ng gutom at ginagawang hindi naaabot ang pagkain para sa marami sa Pilipinas.<br></br>
-							Ang krisis sa COVID-19 ay nakaapekto sa lahat ng aspeto ng buhay sa Pilipinas ngunit lalo na sa food access. Ang isang pag-aaral na ginawa noong Mayo ng 2020 ay nagpakita na 4.2 milyong pamilya ang nag-ulat na nahihirapan sa hindi sinasadyang pagkagutom, na nagdodoble mula noong Disyembre 2019. Ito ay malamang na dahil sa pagkawasak sa ekonomiya at mga isyu sa pananalapi na pinaghirapan ng maraming bansa sa buong mundo mula noong pandemya.<br></br>
-							Inilunsad ng Pamahalaang Pilipino ang Philippines Development Plan nito sa pagsisikap na labanan ang kahirapan at kagutuman at palakasin ang paglikha ng trabaho sa bansa. Ang planong ito ay sinimulan noong 2011 at na-update noong 2017 at nag-ulat ng kahanga-hangang tagumpay sa paglikha ng trabaho, edukasyon at pagbabawas ng kahirapan.<br></br>
-							Ang iba’t - ibang Piipino NGOs gayundin ang ilan mula sa labas ng bansa, ay nagtrabaho upang labanan ang kahirapan sa Pilipinas. Isang grupo na tinatawag na Zero Extreme Poverty PH 2030 (ZEP) ang nanguna sa pagsingil, na inialay ang sarili sa pag-alis ng kahirapan sa bansa pagsapit ng 2030 sa pamamagitan ng pagpapatibay ng positibong pagbabago sa walong lugar: edukasyon, kapaligiran, kalusugan, pabahay at tirahan, kabuhayan, kapayapaan at seguridad ng tao at katarungang panlipunan. Noong 2018, lumikha ang ZEP ng isang koalisyon ng iba’t ibang NGO mula sa Pilipinas at sa buong mundo, na may layuning tulungan ang mga nabubuhay sa ilalim ng linya ng kahirapan sa bansa.
-							
+							Sa mas mababang katayuang sosyo-ekonomiko, karaniwang nauuwi sa limitadong pribilehiyo sa pagbabakuna at pangangalagang pangkalusugan, na nagreresulta sa mataas na rate ng pneumonia.<br></br>
+							Noong 2019, nasa 64% ng sambahayang Pilipino ang naghihirap sa kakulangan ng pagkain, at dalawang sa bawat sampung batang hindi pa 5 taong gulang ay may kakulangan sa timbang. Ang mataas na bilang ng natural na kalamidad at malaking populasyon sa mga rural na lugar ay nagdadagdag sa problema ng gutom, lalo na sa Pilipinas.<br></br>
+							Ang krisis ng COVID-19 ay nakaaapekto sa lahat ng aspeto ng buhay sa Pilipinas, partikular na sa access sa pagkain. Sa isang pag-aaral noong Mayo 2020, 4.2 milyong pamilya ang nag-ulat ng hindi inaasahang pagkagutom, na dobleng bilang mula Disyembre 2019. Ito ay marahil dahil sa epekto ng pandemya sa ekonomiya at pinansiyal na mga isyu.<br></br>
+							Ang Pamahalaang Pilipino ay naglunsad ng Philippines Development Plan upang labanan ang kahirapan at kagutuman, at palakasin ang job creation. Simula noong 2011 at na-update noong 2017, ito ay nagtagumpay sa job creation, edukasyon, at pagbawas ng kahirapan.<br></br>
+							Iba’t-ibang Pilipino NGOs at ilan mula sa ibang bansa ang nakipagtulungan upang labanan ang kahirapan sa Pilipinas. Ang Zero Extreme Poverty PH 2030 (ZEP) ay naglunsad ng isang koalisyon noong 2018, na naglalayong wakasan ang kahirapan sa bansa sa 2030 sa pamamagitan ng positibong pagbabago sa edukasyon, kapaligiran, kalusugan, pabahay, kabuhayan, kapayapaan, seguridad ng tao, at katarungang panlipunan.
+
 							<h3>Hadlang at hamon ng kahirapan</h3>
 							Sa Pilipinas, ang mga pangunahing hamon sa pagwawakas ng matinding kahirapan ay kapareho ng mga hamon sa pag-unlad ng bansa. Mahinang pamamahala at kakulangan ng espasyo sa pananalapi, na sumasalamin sa malaganap na katiwalian. Hindi sapat na edukasyon at serbisyong pangkalusugan. Ang pagpapatuloy ng armadong labanan sa katimugang isla ng Mindanao ay hindi sapat na pamamahala ng likas na yaman at tumaas na dalas at tindi ng mga natural na sakuna.<br></br>
 							Ang mahabang kasaysayan ng mga pagbaluktot sa patakaran ng bansa ay humantong sa mga huwaran ng paglago na nabigong magbigay ng magandang trabaho sa karamihan ng mga Pilipino. Ang mga lungsod sa Pilipinas ay hindi nakaagapay sa sumasabog na paglaki ng mga populasyon sa lunsod, na pinatunayan sa mga kakulangan sa imprastraktura at pabahay, pagsisikip ng trapiko at polusyon sa kapaligiran. Ang pag-aatubili ng pribadong sektor na mamuhunan at lumikha ng higit at mas mahusay na kalidad ng mga trabaho ay sumasalamin sa mahinang klima ng pamumuhunan ng bansa para sa mga kumpanya sa lahat ng laki.<br></br>
 							Ang Gobyerno ng Pilipinas ay kasalukuyang nagbibigay ng pamataang direkta tulong sa lubhang mahihirap sa pamamagitan ng mga programang panlipunang proteksyon. Sa pamamagitan ng isang “Conditional cash transfer program”, ang mga mahihirap na pamilya ay tumatanggap ng tulong na pera kapag natupad nila ang mga kinakailangan para sa libreng pagbabakuna sa bata na ibinibigay ng gobyerno at ipinatala ang kanilang mga anak sa paaralan. Upang mapondohan at maipatupad ang pangkalahatang programang pangkalusugan nito at pagbutihin ang pribilehiyo sa pangunahing edukasyon, agresibong pinapabilis ng Pamahalaan ng Pilipinas ang pagkolekta ng kita, pagpapabuti ng pamamahala ng pampublikong paggasta at pagtugon sa mga hadlang sa epektibong lokal na pamamahala.<br></br>
 							
-							Kasabay nito, kinikilala ng Gobyerno ng Pilipinas na ang pagwawakas sa matinding kahirapan ay nangangailangan ng mga estratehiya at programa na naglalayong mapanatili ang inklusibo, matatag na paglago. Ang USAID, sa pamamagitan ng U.S.-Philippines Partnership for Growth, ay tumutulong sa Pamahalaan ng Pilipinas na tugunan ang mga umiiral na hadlang sa inclusive growth sa pamamagitan ng pagpapabuti ng kalidad ng mga patakaran, regulasyon at pagpapatupad ng mga ito; pagpapalakas ng panuntunan sa batas at mga hakbang laban sa katiwalian; pagpapabuti ng pagganap ng pananalapi; at pagtataguyod ng pag-unlad ng kakayahan ng tao. Sinusuportahan ng USAID ang mga pagsisikap na tulungan ang mga pangalawang antas na lungsod sa labas ng Metro Manila na maging epektibong makina ng paglago sa kanilang mga lokalidad at mga nakapaligid na lugar.<br></br>
-							Itinataguyod ng USAID ang kapayapaan at katatagan sa mga lugar na apektado ng kaguluhan sa Mindanao, kung saan naninirahan ang marami sa mga mahihirap sa bansa. Pinapalakas ng USAID ang katatagan ng kapaligiran sa pamamagitan ng mga programang nagpapagaan sa epekto ng mga natural na kalamidad, upang mabawasan ang epekto sa mga mahihirap, na hindi gaanong apektado ng mga kalamidad na ito. Ang USAID ay nagpapatupad din ng mga programa na nagpapabuti sa pagkuha sa kalidad ng edukasyon at mga serbisyong pangkalusugan. Sa wakas, sa pamamagitan ng makataong tulong sa mga lugar na apektado ng kalamidad at salungatan, sinusuportahan ng USAID ang mga pagsisikap na maibalik ang agarang pag-access—lalo na para sa mahihirap—sa mga pangunahing serbisyo.<br></br>
+							Kasabay nito, kinikilala ng Gobyerno ng Pilipinas na ang pagwawakas sa matinding kahirapan ay nangangailangan ng mga estratehiya at programa.<br></br>
+							Naglalayon ang USAID, sa pamamagitan ng U.S.-Philippines Partnership for Growth, na mapanatili ang inklusibo at matatag na paglago sa Pilipinas. Tumutulong sila sa pamahalaan sa pag-address ng mga umiiral na hadlang sa inclusive growth sa pamamagitan ng pagpapabuti ng patakaran, regulasyon, at pagpapatupad nito. Itinataguyod ng USAID ang kapayapaan at katatagan sa Mindanao at pinapalakas ang kapaligiran laban sa epekto ng natural na kalamidad. Sinusuportahan din ang mga programa para sa edukasyon at pangkalusugang serbisyo, at sa pagtulong sa mga lugar na naapektohan ng kalamidad, layuning maibalik ang agarang pag-access sa pangunahing serbisyo, lalo na para sa mahihirap.
 							
-							<h3>Mga dahilan sa kahirapan sa Pilipinas</h3>
-							Maraming tao ang kulang pa rin ng pribilehiyo sa de-kalidad na edukasyon, pangangalagang pangkalusugan, kuryente, malinis na tubig, at iba pang mahahalagang pacilidad. Ito ay madalas dahil sa kanilang panlipunang karanasan, kasarian, lahi, o lokasyon. Ang mga makakatakas sa kahirapan ay karaniwang kumikita lamang ng panandaliang pakinabang. Ang mga pagkabigla sa ekonomiya, kawalan ng seguridad sa pagkain, at pagbabago ng klima ay maaaring maging sanhi ng pagkawala ng lahat ng kanilang pag-unlad at bumalik sa kahirapan.<br></br>
-							Mahirap takasan ang kahirapan, at ito ay madalas na ipinapasa mula sa isang henerasyon hanggang sa susunod. Karaniwan, ang kahirapan ay nagreresulta sa maling paggamit ng droga at alkohol, limitadong oportunidad sa edukasyon, substandard na pabahay at mga kalagayan sa pamumuhay, at pagtaas ng sakit. Habang lumalala ang hindi pagkakapantay-pantay, ang kahirapan ay malamang na magpapalala ng mga tensyon sa lipunan. Kapag mahirap ang mga tao, ang mga isyung ito ay madalas na humahantong sa pagtaas ng bilang ng krimen.<br></br>
-							Ang mga pangunahing sanhi ng kahirapan sa bansa ay ang mga sumusuno:
+							<h3>Mga dahilan ng kahirapan sa Pilipinas</h3>
+							Maraming tao ang patuloy na kulang ng pribilehiyo ng mga mahahalagang serbisyong tulad ng de-kalidad na edukasyon, pangangalagang pangkalusugan, kuryente, malinis na tubig, at iba pang essential na facilidad. Ang pagkukulang na ito ay kadalasang bunga ng kanilang panlipunang karanasan, kasarian, lahi, o lokasyon. Ang mga nakakatawid sa kahirapan ay madalas lamang kumikita ng pansamantalang ginhawa. Ang mga pagbabago sa ekonomiya, kakulangan sa seguridad sa pagkain, at epekto ng climate change ay maaring maging sanhi ng pagkawala ng lahat ng kanilang naabot at pagbabalik sa kahirapan.<br></br>
+							Napakahirap takasan ang kahirapan, at ito ay karaniwang isinasalin mula sa isang henerasyon patungo sa susunod. Karaniwan, ang kahirapan ay nagreresulta mula sa maling paggamit ng droga at alkohol, kawalan ng sapat na oportunidad sa edukasyon, substandard na pabahay at kalagayan sa pamumuhay, at pagtaas ng karamdaman. Sa pagtaas ng hindi pagkakapantay-pantay, mas malamang na magdulot ito ng tensyon sa lipunan. Kapag mahirap ang mga tao, ang mga isyung ito ay madalas humantong sa pagtaas ng krimen.<br></br>
+							Ang mga pangunahing sanhi ng kahirapan sa bansa ay kinabibilangan ng sumusunod:
 							<ul class=bullets>
-								<li>Mababa hanggang katamtamang paglago ng ekonomiya sa nakalipas na 40 taon.</li>
-								<li>Mababang pagkalastiko ng paglago ng pagbabawas ng kahirapan.</li>
-								<li>Kahinaan sa pagbuo ng trabaho at ang kalidad ng mga trabahong nabuo.</li>
-								<li>Pagkabigong ganap na mapaunlad ang sektor ng agrikultura.</li>
+								<li>Mababang hanggang katamtamang paglago ng ekonomiya sa nakalipas na 40 taon.</li>
+								<li>Kakulangan ng pag-unlad sa pagbawas ng kahirapan.</li>
+								<li>Hirap sa pagbuo ng mga trabaho at kahinaan sa kalidad ng mga ito.</li>
+								<li>Kabiguan sa ganap na pag-unlad ng sektor ng agrikultura.</li>
 								<li>Mataas na inflation sa panahon ng krisis.</li>
-								<li>Mataas na antas ng paglaki ng populasyon.</li>
-								<li>Mataas at patuloy na antas ng hindi pagkakapantay-pantay (mga kita at ari-arian), na nagpapahina sa mga positibong epekto ng pagpapalawak ng ekonomiya.</li>
-								<li>Mga paulit-ulit na pagkabigla at pagkakalantad sa mga panganib tulad ng krisis sa ekonomiya, mga salungatan, mga natural na sakuna, at “kahirapan sa kapaligiran.</li>
+								<li>Mataas na rate ng populasyon.</li>
+								<li>Mataas at patuloy na antas ng hindi pagkakapantay-pantay sa kita at ari-arian, na nagbubunga ng paghihina sa positibong epekto ng pagsulong ng ekonomiya.</li>
+								<li>Madalas na pag-eksposur sa mga panganib tulad ng krisis sa ekonomiya, alitan, natural na kalamidad, at “kahirapan sa kapaligiran.”</li>
 							</ul><br></br>
-							
-							Ayon sa World Bank, sa pagitan ng 1985 at 2018, ang antas ng kahirapan sa Pilipinas ay bumaba ng dalawang-katlo, salamat sa mga hakbangin sa paglago ng ekonomiya at pamumuhunan sa imprastraktura, kabilang ang edukasyon. Gayunpaman, ang mga pagpapabuti ay higit na nakatuon sa mga lugar na may pinakamaraming populasyon, kung saan mayroon nang pinakamaraming pagkakataon. Ayon sa Asian Development Bank, ang pinakamataas na isang porsyento ng mga kumikita ay may pinakamaraming nakinabang, na nakakuha ng 17 porsyento ng pambansang kita, habang 14 na porsyento lamang ng pambansang kita ang nakukuha ng pinakamababang kumikita na 50 porsyento ng populasyon.<br></br>
-							Ang hindi pagkakapantay-pantay ng kita ng Pilipinas ay nagmumula sa ilang mga salik sa istruktura. Ang mas mataas na edukasyon at pag-unlad ng mga kasanayan sa trabaho ay hindi maabot ng marami. Ang hindi pantay na pag-access sa kolehiyo, at mga pamantayan sa lipunan na nag-iiwan sa kababaihan sa isang kawalan, ay nakakatulong din sa patuloy na hindi pagkakapantay-pantay. At ang heograpiya ng bansang arkipelago na ito ay lalong nagpapahirap sa isyu na lutasin, dahil ang mga pagkakataon at likas na yaman ay hindi pantay na namamahagi.<br></br>
-							<h3>Pag-unawa sa Epekto ng Kahirapan sa Pamilya</h3>
-							Ang kahirapan sa pamilya ay hindi lamang tungkol sa pakikibaka sa pananalapi. Nakakaapekto ito sa bawat aspeto ng kagalingan ng isang sambahayan. Ang mga batang nabubuhay sa kahirapan ay mas maliit ang posibilidad na mag-enrol sa paaralan at umabot sa mga antas ng grado na naaangkop sa edad dahil ang kanilang oras ay kailangan upang tulungan ang pamilya na magsikap na matugunan ang kanilang mga pangunahing pangangailangan sa pang-araw-araw na pamumuhay. Pinipigilan nito ang kanilang pag-access sa mas mataas na edukasyon at ang mga oportunidad sa hinaharap na idudulot nito, nililimitahan ang potensyal na kumita, ang potensyal na paglago ng ekonomiya ng mga pamilya, at ang posibilidad ng pag-unlad ng komunidad.<br></br>
-							Malaki ang epekto ng density ng populasyon sa kahirapan sa Pilipinas. Ang mga lugar na may mataas na populasyon ay madalas na nagpupumilit na pamahalaan ang limitadong likas at mapagkukunan ng pamahalaan, na negatibong nakakaapekto sa kalidad ng buhay. At ang kakulangan ng mga oportunidad sa trabaho sa mga lugar na may makapal na populasyon ay nag-aambag sa antas ng kahirapan. Ang mga hamon na ito ay tumutulo sa mga malalayong lugar, na ginagawang mas mahirap para sa mga rural na komunidad at marginalized na mga tao na basagin ang kanilang walang katapusang ikot ng kahirapan.<br></br>
-							
+							Sa mga taon mula 1985 hanggang 2018, nabawasan ng dalawang-katlo ang antas ng kahirapan sa Pilipinas, ayon sa World Bank. Ito’y bunga ng pag-unlad ng ekonomiya at pamumuhunan sa imprastruktura at edukasyon. Subalit, mas nakatuon ang mga pagpapabuti sa mga lugar na may mataas na populasyon, kung saan mas maraming oportunidad. Ang Asian Development Bank ay nagpapahayag na ang pinakamataas na isang porsyento ng kumikita ay may nakukuha nang 17 porsyento ng pambansang kita, habang 14 porsyento lamang ang napupunta sa pinakamababang kumikita na 50 porsyento ng populasyon.<br></br>
+							Ang hindi pagkakapantay-pantay ng kita sa Pilipinas ay bunga ng ilang istruktural na isyu. Marami ang hindi nakakamit ang mas mataas na antas ng edukasyon at kasanayan sa trabaho. Ang hindi pantay na pag-access sa kolehiyo at lipunang naglalagay sa kababaihan sa kawalan ay nagpapalala sa hindi pagkakapantay-pantay. Ang heograpiya ng arkipelagong bansa ay nagdadagdag din sa komplikasyon, dahil ang oportunidad at yaman ay hindi pantay na hinahati.<br></br>
+							Ang epekto ng kahirapan sa pamilya ay lumalabas hindi lamang sa aspeto ng pananalapi. Nakakasira ito sa kabuuang kagalingan ng sambahayan, lalung-lalo na sa edukasyon ng mga batang nabubuhay sa kahirapan. Ang mataas na density ng populasyon sa ilang lugar ay nagreresulta sa pagsikil ng likas at mapagkukunan ng pamahalaan, na nagiging negatibong epekto sa kalidad ng buhay. Ang kakulangan sa oportunidad sa trabaho ay naglalagay din ng karagdagang panganib sa mga lugar na may maraming tao, lalong nagpapahirap sa mga rural na komunidad at sa mga marginalized na sektor.
+
 							<h3>Mga Kondisyon ng Pamumuhay at Mga Hamon sa Mapagkukunan</h3>
-							Ang mga kondisyon ng pamumuhay sa mga lugar na makapal ang populasyon sa Pilipinas ay apektado ng kakulangan ng mapagkukunan at hindi sapat na mga sistema ng suporta ng pamahalaan. Ang pribilehiyo sa mga pangunahing pangangailangan tulad ng kuryente, ligtas na inuming tubig, at de-kalidad na edukasyon ay nananatiling hindi pantay. Ang kakapusan na ito ay hindi lamang nililimitahan ang potensyal para sa pag-unlad sa buong bansa ngunit nagpapatuloy din ang hindi pagkakapantay-pantay. Dahil dito, ang mga mahihirap na komunidad ay nahaharap sa pang-araw-araw na pakikibaka, na ginagawang mas mahirap na makawala sa ikot ng kahirapan.<br></br>
-							<h3>Ang epekto ng pandemic: Isang krisis na nagpapalakas ng kahirapan</h3>
-							Ang pandemya ng COVID-19 ay nagkaroon ng matinding epekto sa kahirapan sa Pilipinas. Noong 2020, pinahinto ng pandemya ang paglago ng ekonomiya, na humahantong sa mas mataas na antas ng kawalan ng trabaho. Habang nagpapatuloy ang kaganapang ito hanggang 2021, tumaas ang antas ng kahirapan ng 18.1 persyento, ayon sa World Bank. Ito ay nasa ilalim lamang ng 20 milyong tao. At kahit na ang ekonomiya ay patuloy na bumabawi, ang pagbawi na ito ay hindi pantay, na ang pinakamahihirap na sambahayan ay nakikinabang ng hindi bababa sa. Habang ibinabalik ng mga pagpapabuti ang maraming lugar sa normal, ang mga komunidad sa maraming liblib na lugar ay nagpupumilit pa ring ibalik ang kanilang mga ekonomiya kahit na sa mahirap nang antas bago nagsimula ang pandemya.<br></br>
-							Ang isang patuloy na pakikibaka para sa mga pamilyang nabubuhay sa kahirapan ay ang kawalan ng seguridad sa pagkain. At ayon sa mga mapagkukunan tulad ng National Library of Medicine, ito ay naging mas makabuluhan sa panahon ng pandemya. Halos dalawang-katlo (61.2%) ng mga sambahayan ang nakaranas ng katamtaman hanggang sa matinding kawalan ng pagkain sa loob ng maraming buwan ng quarantine. At sa pagtaas ng presyo ng pagkain at limitadong likas na yaman, kadalasang kailangang limitahan ng mga mahihinang sambahayan ang kanilang pagkain. Nagdulot ito ng kakulangan sa wastong nutrisyon, lalo na sa mga bata. Ang Outreach International ay nagpatupad ng isang epektibong paraan ng paglaban sa kawalan ng pagkain para sa kahit na ang pinakamahihirap na pamilya. Ang aming mga kasosyo sa OPI ay tumulong sa mga organisasyong pinamumunuan ng komunidad na bumuo ng mga pautang sa bigas. Ito ay mga pautang ng bigas na mababa ang interes o ang pondong pambili nito. At dahil mismong ang mga komunidad ang namamahala sa mga pautang na ito, maiiwasan ng mga manghihiram ang mandaragit sa labas ng mga institusyong nagpapautang at maaaring makitungo sa mga taong kilala at pinagkakatiwalaan nila.<br></br>
+							Sa mga lugar sa Pilipinas na naglalaman ng masalimuot na dami ng tao, nararanasan ang mga hamon sa pamumuhay dulot ng kakulangan sa mapagkukunan at hindi sapat na suporta mula sa pamahalaan. Ang mga pangunahing pangangailangan tulad ng kuryente, ligtas na inuming tubig, at de-kalidad na edukasyon ay hindi pa rin pantay-pantay. Ang kakulangan na ito ay hindi lamang naghihigpit sa potensyal ng pambansang pag-unlad kundi nagdudulot din ng patuloy na paglaganap ng hindi pagkakapantay-pantay. Ito ang nagiging sanhi ng araw-araw na pakikibaka sa mga mahihirap na komunidad, anupat ito'y nagpapahirap sa kanilang paglabas mula sa kadenang itim ng kahirapan.<br></br>
+							<h3>Epekto ng Pandemya: Pagtaas ng Kahirapan</h3>
+							Ang COVID-19 ay nagdulot ng malupit na epekto sa kahirapan sa Pilipinas. Noong 2020, huminto ang paglago ng ekonomiya dahil sa pandemya, nagresulta sa mataas na antas ng kawalan ng trabaho. Hanggang sa 2021, lumaki ang antas ng kahirapan ng 18.1%, ayon sa World Bank, na apektado ang halos 20 milyong tao. Bagamat may mga hakbang na isinagawa para sa ekonomikong pag-angat, hindi ito pantay, at ang pinakamahihirap na mga sambahayan ay hindi nakakakuha ng sapat na tulong. Kahit ang ilang lugar ay bumabalik sa normal, nagpapatuloy ang pagsisikap ng mga komunidad sa liblib na mga lugar na ibalik ang kanilang ekonomiya, na nagiging mas malupit pa sa antas bago ang pandemya.<br></br>
+							Isang patuloy na laban para sa mga pamilyang nakararanas ng kahirapan ay ang kawalan ng seguridad sa pagkain. Sa panahon ng pandemya, ayon sa National Library of Medicine, ang sitwasyon ay lalong nagiging kritikal. Mahigit kalahati (61.2%) ng mga sambahayan ang nakakaranas ng matindi o kahit na matinding kakulangan sa pagkain sa loob ng maraming buwan ng quarantine. Sa pagtaas ng presyo ng pagkain at kakulangan sa likas na yaman, kadalasang kinakailangan ng mga mahihirap na sambahayan na magbawas ng konsumo ng pagkain. Dahil dito, nagiging sanhi ito ng kakulangan sa tamang nutrisyon, lalo na sa mga kabataan.<br></br>
+							Upang harapin ang krisis na ito, isinasagawa ng Outreach International ang epektibong paraan ng pagtugon sa kawalan ng pagkain, partikular sa pinakamahihirap na pamilya. Kasama ang mga partners ng OPI, ang mga komunidad mismo ang namumuno sa pagbuo ng mga programa tulad ng pautang sa bigas. Ito ay may mababang interes o sariling pondo ng pamayanan para sa pagbili ng bigas. Ang ganitong paraan ng pautang ay nagbibigay daan para sa mga manghihiram na makaiwas sa mapanakot na interes mula sa labas, at nagbibigay ng pagkakataon na makipag-ugnayan sa mga kilala at mapagkakatiwalaang tao sa komuKahirapan.
 							
 							<h3>Mga Inisyatiba na Nagbago sa Realidad</h3>
-							Bilang tugon sa mga hamon na dulot ng pandemya, kapwa ang gobyerno ng Pilipinas at mga organisasyon tulad ng Outreach International ay nagpatupad ng iba’t ibang mga hakbangin upang maibsan ang kahirapan at ang mga epekto nito. Ang ilang organisasyon ay nagbigay ng mga serbisyong pangkalusugan at tulong sa mga apektadong komunidad. Ang ganitong mga hakbangin ay mahalaga sa pagpapagaan ng agarang epekto ng krisis at pagtulong sa mga mahihinang populasyon sa maikling panahon.<br></br>
-							Ngunit ang Outreach International ay nakatuon din sa mas pangmatagalan at napapanatiling mga hakbangin na maaaring tuluyang masira ang ikot ng kahirapan. Ang aming pamamaraan ng pag-unlad na pinangungunahan ng komunidad ay nagbibigay-daan sa mga taong nabubuhay sa talamak na kahirapan na malaman na sila ay may kapangyarihan sa kanilang sarili na mapabuti ang kanilang buhay nang permanente. Ang aming mga kasosyo sa Pilipinas, ang Outreach Philippines Incorporated (OPI), ay nakikipagtulungan sa mga pinuno sa mga komunidad upang tukuyin ang kanilang sariling natatanging mga isyu na may kaugnayan sa kahirapan, at pagkatapos ay makikilos upang malutas ang mga ito. Natututo sila kung paano bumuo ng mga network sa mga ahensya ng gobyerno at NGO na may kakayahang magbigay ng mga mapagkukunan. At natututo sila kung paano magtakda ng patuloy na tumataas na mga layunin ng pagpapabuti, na humahantong sa patuloy na pag-unlad na napapanatiling para sa mga henerasyon.<br></br>
-							<h3>Kahirapan bilang kawalan ng kalayaan</h3>
-							Ayon sa aming pagsaliksik, tinukoy ng ekonomista na si Amartya Sen ang kahirapan bilang ‘isang kawalan ng kakayahanyo. Iyon ang kahirapan na nakikita bilang kawalan ng kakayahan na mamuhay ng isang disenteng buhay. Kaya, lumalampas sa tradisyonal na konsepto ng kahirapan bilang kakulangan lamang ng kita o mga kalakal.<br></br>
-							Nakatuon si Sen sa potensyal ng mga indibidwal na makamit at mapalawak ang kanilang mga kakayahan. Ang mga pangunahing konsepto sa teorya ni Sen ay kaya kakayahan at gumagana. Ang kakayahan ay tumutukoy sa kakayahan ng isang tao upang makamit ang isang bagay at ang mabisang pagkakataong taglay ng isang indibidwal patungkol sa uri ng buhay na maaaring mamuno ng indibidwal na iyon. Ang gumagana ay kumakatawan ng mga aksyon at ‘estado’ ng isang indibidwal (Sen, 1999, p.75).<br></br>
-							Ang paggana ay isang tagumpay, samantalang ang kakayahan ay ang kakayahang makamit. Ang mga paggana ay, sa isang kahulugan, mas direktang nauugnay sa mga kondisyon ng pamumuhay, dahil sila ay iba’t – ibang aspeto ng kondisyon ng pamumuhay. Ang mga kakayahan, sa kaibahan, ay mga paniwala. Kalayaan, sa positibong kahulugan ay kung ano ang tunay na mga pagkakataon na mayroon ka tungkol sa buhay na maaari mong pangunahan (Sen, 1987, p.36).<br></br>
-							Ang kahulugang ito ng kahirapan ay nakabatay sa paniwala ni Aristotelian na isang naghihirap. Ang buhay ay isang tao na kung saan ay hindi malayang isagawa ang mga mahahalagang gawain na may dahilan upang pumili (Sen, 2000). Sa madaling salita, ang kahirapan ay maaaring maunawaan bilang isang kakulangan ng kalayaan, dahil pinapayagan ng kalayaan ang mga tao na dagdagan ang mga kakayahan na nagbibigay-daan sa kanila mamuhay sa paraang nais nilang ipamuhay ito.
+							Sa pagtugon sa mga hamon dulot ng pandemya, nagsagawa ang gobyerno ng Pilipinas at mga organisasyon tulad ng Outreach International ng iba’t ibang hakbang upang maibsan ang kahirapan at epekto nito. Ang ilang organisasyon ay nagbibigay ng serbisyong pangkalusugan at tulong sa mga apektadong komunidad, na naglalarawan ng mahalagang papel sa pagsugpo ng krisis at pagtulong sa mga mahihirap sa maikliang panahon.<br></br>
+							Subalit, ang Outreach International ay hindi lamang nakatutok sa agarang solusyon kundi nagtataguyod din ng pangmatagalang hakbang na maaaring tuluyang labanan ang kahirapan. Ang kanilang pamamaraan ng pag-unlad na pinangungunahan ng komunidad ay nagbibigay ng kapangyarihan sa mga taong nabubuhay sa kahirapan na mapabuti ang kanilang buhay nang permanente. Sa pakikipagtulungan ng Outreach Philippines Incorporated (OPI) sa mga komunidad, itinutok ang pansin sa natatanging isyu ng kahirapan at inilalapat ang mga solusyon sa pamamagitan ng kooperasyon sa mga lider ng komunidad, pagbuo ng network sa mga ahensya, at pagtuklas ng mga mapagkukunan.<br></br>
+							Ang kahirapan, ayon sa ekonomista na si Amartya Sen, ay hindi lamang kakulangan ng kita kundi isang kawalan ng kakayahan. Binibigyang-diin ni Sen ang potensyal ng mga indibidwal na palawakin ang kanilang mga kakayahan at maging malaya. Ang kahulugang ito ng kahirapan ay nakatutok sa Aristotelian na perspektiba, kung saan ang kalayaan ay nagbibigay-daan sa mga tao na mapabuti ang kanilang buhay nang may laya.
 						</span>
 					</div>
 					<div id=p2_img class=content_img>
@@ -238,6 +232,7 @@
 		</div>
 		<div id=page3 class=page>
 			<div class=ct_cnt>
+				<img class=title_img src="page3.jpeg"/>
 				<div class=flexbox>
 					<div class=content_text>
 						<h1 class=title></h1>
@@ -246,6 +241,38 @@
 						</span>
 					</div>
 					<div id=p3_img class=content_img>
+						img
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id=page4 class=page>
+			<div class=ct_cnt>
+				<img class=title_img src="page4.jpeg"/>
+				<div class=flexbox>
+					<div class=content_text>
+						<h1 class=title></h1>
+						<span id=p4_text>
+							
+						</span>
+					</div>
+					<div id=p4_img class=content_img>
+						img
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id=page5 class=page>
+			<div class=ct_cnt>
+				<img class=title_img src="page5.jpeg"/>
+				<div class=flexbox>
+					<div class=content_text>
+						<h1 class=title></h1>
+						<span id=p5_text>
+							
+						</span>
+					</div>
+					<div id=p5_img class=content_img>
 						img
 					</div>
 				</div>
@@ -268,11 +295,13 @@
 		</div>
 		<div id=aboutpage class=page>
 			<div class=ct_cnt>
-				<div id=abr_text class=content_text>
-					About Page
-				</div>
-				<div id=abt_img class=content_img>
-					img
+				<div class=flexbox>
+					<div id=abr_text class=content_text>
+						About Page
+					</div>
+					<div id=abt_img class=content_img>
+						img
+					</div>
 				</div>
 			</div>
 		</div>
@@ -292,10 +321,18 @@ function percentToPixel(el,p,t){
 }
 function update(){
 	windowWidth=parseFloat(window.getComputedStyle(header).getPropertyValue("width"));
-	getByClass("content_text").forEach(e=>percentToPixel(e,65,"width"))
-	getByClass("content_img").forEach(e=>percentToPixel(e,35,"width"))
+	getByClass("content_text").forEach(e=>{
+		let p=Number(e.dataset.p);
+		if(isNaN(p))p=65;
+		percentToPixel(e,p,"width")
+	})
+	getByClass("content_img").forEach(e=>{
+		let p=parseFloat(e.dataset.p);
+		if(isNaN(p))p=35;
+		percentToPixel(e,p,"width")
+	})
 	getByClass("ct_cnt").forEach(e=>percentToPixel(e,85,"width"))
-	percentToPixel("hmpgt",85,"width")
+	getByClass("title_img").forEach(e=>percentToPixel(e,85,"width"))
 	requestAnimationFrame(update)
 }
 update()
@@ -308,10 +345,55 @@ function switchTab(tab){
 function showPages(){
 	getById("page_list").classList.toggle("show");
 }
-window.onclick=e=>{
-	let d=getByClass("pg_cn");
-	if(!e.target.matches(".dropdown"))d.forEach(e=>e.classList.contains("show")&&e.classList.remove("show"));
-}
+window.onclick=e=>!e.target.matches(".dropdown")&&getByClass("pg_cn").forEach(e=>e.classList.contains("show")&&e.classList.remove("show"));
 		</script>
 	</body>
 </html>
+<!--
+PAGE 3.1 
+Ang mga bagay na maaari nating gawin upang makakuha ng kalayaan mula sa kahirapan ay ang mga alinsunod :
+Una, alisin ang mga regulasyong proteksyonista tulad ng Seksyon 10 at 11, Artikulo 12 – Pambansang Patrimonya, 1987 Konstitusyon. Pinoprotektahan lamang ng mga probisyong ito ang mga negosyanteng Pilipino sa kapinsalaan ng mga mamimiling Pilipino. Sa pamamagitan ng pagbubukas ng ekonomiya, ang mga dayuhang negosyo ay maaaring makipagkumpitensya sa lokal upang magbigay ng mas abot-kayang mga produkto at serbisyo. Ang mga Pilipinong naghahanap ng trabaho ay magkakaroon din ng mas maraming mapagpipiliang trabaho kapag ang mga negosyong Pilipino ay hindi handang magbigay ng sahod sa mga manggagawang Pilipino na kabayaran sa kanilang mga kontribusyon sa ekonomiya.
+Ikalawa, bawasan ang halaga ng buwis. Nangangahulugan ito na mas maraming Pilipino ang makakaipon ng mas malaki sa kanilang kita sa halip na ibigay ito sa gobyerno. Kung mas maraming kita ang kayang panatilihin ng mga tao, mas mabilis silang makaahon sa kahirapan.
+Ikatlo, bawasan ang halaga ng taripa sa 0,0. Nangangahulugan ito na ang mga Pilipino ay magkakaroon ng pribilehiyo sa mga de-kalidad na produkto nang hindi nagbabayad ng braso at binti. Hindi makatuwirang magbayad ng mas mataas na presyo para sa mga kalakal at serbisyo dahil lang sa Pilipino ang gumawa. Ito ay magbibigay-daan sa mga Pilipino na magkaroon ng mas maraming kita na magagamit nila sa iba pang pangangailangan.
+Ikaapat, iIpawalang-bisa ang lahat ng mga regulasyong pang-ekonomiya. Ang lahat ng mga regulasyong ito ay nagpapalala lamang ng kahirapan dahil binabawasan ng mga regulasyong ito ang grupo ng mga supplier sa gitna ng malaking pangangailangan.
+Panghuli ay ang pamahalaan. Ang pagkakaroon ng isang malaking gobyerno ay nangangahulugan na ang mga tao ay kailangang maglabas ng mas maraming kita upang mabayaran ang mga suweldo ng mga burukratang ito na ang tanging kakayahan ay pumirma sa isang piraso ng papel at pagtataas ng kanilang mga kamay. Ang pagbabawas kung hindi man tahasan ang pag-aalis ng lahat ng mga ahensya ng gobyerno na ito ay makakabawas sa pasanin ng pagbubuwis. Kaya mas maraming tao ang maaaring panatilihin ang kanilang kita, at mas mabilis na makaahon sa kahirapan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+PAGE 3.2
+Gayunpaman, maaari rin nating makuha at makamit ang kalayaan sa pamamagitan ng edukasyon. Ang edukasyon ay nagiging makabuluhang elemento na nagpapabago ng ating pananaw sa modernong mundo. Sa pag-aaral, masusustentuhan ang buhay at pamilya, nagpapataas ng kamalayan, at nagbibigay ng kasanayan para sa produktibong pamumuhay.
+Ayon sa UNESCO, ang pangunahing kasanayan sa pagbasa at pagsulat ng lahat ng mag-aaral sa mababang kita na bansa ay maaaring makatulong para sa 171 milyong tao na makatakas sa matinding kahirapan. Ang pagtatapos ng sekondaryang edukasyon ng lahat ng nasa hustong gulang ay maaaring bawasan ang pandaigdigang antas ng kahirapan ng higit sa kalahati.
+Hindi pagkakapantay-pantay sa sistema ay naglilikha ng mga hadlang at nag-iiwan sa mga grupo ng tao na walang representasyon sa kanilang komunidad ng mga mapagkukunan at oportunidad. Lahat ng grupo at pagkakakilanlan ay dapat kasangkot sa pagbuo ng solusyon para maibsan ang kahirapan.
+Pagbawas ng kahirapan gamit ang katatagan, pagbabago ng klima at hustisya sa klima ay mahalaga. Ayon sa World Bank, ang pagbabago ng klima ay maaaring magdulot ng karagdagang 100 milyong tao sa matinding kahirapan sa susunod na dekada nang walang agarang aksyon.
+Pag-iwas sa kahirapan sa pamamagitan ng kapayapaan ay nangangahulugang pagtatapos ng digmaan habang naghahanap ng mga paraan para gamitin ang badyet ng hindi pagkakasundo sa pampublikong serbisyo. Ito ay nagbibigay-protekta sa mga komunidad na pinakamahina, nagtataguyod ng pagkakapantay-pantay, at naglalayong mapanatili ang layunin ng pagsasama.
+
+
+
+PAGE 4.1
+Bagama’t nasabi na ang mga dahilan kung bakit tayo ay kailangang makamit ang kalayaan mula sa kahirapan, mayroon ding iilang mga dahilan na nagsasaad kung bakit hindi makakamit ng mga indibidwal ang kalayaan. 
+Isa sa mga pangunahing dahilan kung bakit hindi natin makukuha ang kalayaan mula sa kahirapan ay ang kalidad ng edukasyon ng ating bansa ay hindi pribilehiyo para sa lahat ng indibidwal. May mga hadlang sa pagkatuto ng mga pagkakataon ng maraming estudyante sa buong mundo. Ang isa sa mga pangunahing hadlang sa edukasyon ay ang limitasyon sa pananalapi dahil maraming tao at pamilya ang hindi kayang magbayad para sa mga gastusin sa edukasyon, kabilang ang mga libro, transportasyon, at matrikula. Ito ay dahil sa hindi pagkakapantay-pantay ng ekonomiya. Ang isa pang balakid ay ang pinaghihigpitang pribilehiyo sa mga pasilidad na pang-edukasyon tulad ng mga silid-aralan o paaralan. Ang kakulangan sa pasilidad ay nagpapahirap sa mga mag-aaral na makakuha ng magandang edukasyon lalo na sa kanayunan o papaunlad na mga lugar.
+Ang bitag ng kahirapan ay isang mekanismo na nagpapahirap sa mga tao na makatakas sa kahirapan. Ang isang bitag ng kahirapan ay nalikha kapag ang isang sistema ng ekonomiya ay nangangailangan ng malaking halaga ng kapital upang makatakas sa kahirapan. Kapag ang mga indibidwal ay kulang sa kapital na ito, maaaring mahirapan din silang makuha ito, na lumilikha ng isang self-reinforcing cycle ng kahirapan.
+Maraming salik ang nag-aambag sa paglikha ng isang bitag sa kahirapan, kabilang ang limitadong pribilehiyo sa mga pamilihan ng kredito at kapital, matinding pagkasira ng kapaligiran (na nakakaubos ng potensyal sa produksyon ng agrikultura), tiwaling pamamahala, paglipad ng kapital, mahinang sistema ng edukasyon, ekolohiya ng sakit, kawalan ng pampublikong pangangalagang pangkalusugan, digmaan, at mahinang imprastraktura.
+
+
+What is poverty? (2010, November 25). Government of New Brunswick, Canada. https://www2.gnb.ca/content/gnb/en/departments/ 
+What is poverty? Definition of poverty, poverty meaning – The Economic Times. (n.d.). Business News Live, Share Market News – Read Latest Finance News, IPO, Mutual Funds News. https://m.economictimes.com/definition/poverty/amp
+Woods, D. (2023, September 12). The state of poverty in the Philippines: What are the causes? Outreach International. https://outreach-international.org/blog/poverty-in-the-philippines/
+Kalayaan, ang malayang ensiklopedya. (n.d.). Wikipedia, ang malayang ensiklopedya. Retrieved December 13, 2023, from https://tl.m.wikipedia.org/wiki/Kalayaan
+What are practical solutions to poverty in the Philippines? (n.d.). Quora. https://www.quora.com/What-are-practical-solutions-to-poverty-in-the-Philippines
+Solutions to poverty to get us to 2030. (n.d.). Concern Worldwide. https://concernusa.org/news/solutions-to-poverty/
+
+Page 5 : ( KONKLUSYON)
+
+Ang kalayaan mula sa paghihirap ay isang pambansang layunin na nagtatangi ng dignidad at karapatan ng bawat isa. Sa pag-unlad ng lipunan at ekonomiya, ang tunay na kalayaan ay nakasalalay sa pagkakaroon ng pantay-pantay na oportunidad, edukasyon, at trabaho para sa lahat. Ito’y hindi lamang paglaya mula sa kahirapan kundi pati na rin ang pagbibigay ng kakayahan sa bawat isa na makilahok at maging bahagi ng maunlad na lipunan.
+Ang kahirapan ay mabisa lamang na matutugunan sa pamamagitan ng isang komprehensibong diskarte na kumikilala sa maraming aspeto nito at tumutugon sa mga pinagbabatayan nito. Sa pamamagitan ng pakikipagtulungan at pagbabahagi ng kaalaman, pati na rin ang pagtutok sa pagbibigay ng access sa de-kalidad na edukasyon at mga oportunidad sa trabaho, sa pamamagitan ng pagtutok sa pagpapabuti ng pribilehiyo o oportunidad sa mga mahahalagang serbisyo, pagpapalakas ng paglago ng ekonomiya, at pagpapataas ng kamalayan tungkol sa mga sanhi at solusyon sa kahirapan, maaari tayong magtrabaho tungo sa isang kinabukasan na malaya sa kahirapan para sa lahat ng Pilipino.
