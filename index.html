@@ -43,10 +43,19 @@
 				user-select:none;
 				font-weight:900;
 				color:white;
-				padding:18px;
+				height:55px;
+				line-height:27.5px;
+				padding-left:18px;
+				padding-right:18px;
+				line-height:27.5px;
 				float:left;
 				margin-left:5px;
 				background:#071c2e;
+			}
+			div#tab_container>div>p{
+				display:inline-block;
+				vertical-align:middle;
+				line-height:1.5;
 			}
 			div#tab_container>div:hover{background:#103452}
 			div.page{padding:25px}
@@ -69,7 +78,7 @@
 				border-radius:2.5px;
 				box-shadow:0px 8px 16px 0px rgba(0,0,0,.2);
 				z-index:1;
-				offset-position:80px 257px;/*67+20x , x=pagecount, if p takes 2 lines +10*/
+				offset-position:80px 305px;/*67+20x , x=pagecount, if p takes 2 lines +10*/
 				offset-anchor:center;
 				offset-path:ray(90deg);
 			}
@@ -106,8 +115,8 @@
 		<div id=header>
 			<div id=tab_container>
 				<img src="logo.png"alt="chadwick logo"style="height:55px;position:fixed;right:0;">
-				<div onclick="switchTab('homepage')">Home</div>
-				<div class=dropdown onclick="showPages()">Pages
+				<div onclick="switchTab('homepage')"><p>Home</p></div>
+				<div class=dropdown onclick="showPages()"><p>Pages</p>
 					<div id=page_list class=pg_cn>
 						<a onclick="switchTab('page1')">PAGBIBIGAY-PUGAY</a>
 						<a onclick="switchTab('page2')">KALAYAAN</a>
@@ -118,7 +127,7 @@
 						<a onclick="switchTab('page7')">MGA SANGGUNIAN</a>
 					</div>
 				</div>
-				<div onclick="switchTab('aboutpage')">About</div>
+				<div onclick="switchTab('aboutpage')"><p>About</p></div>
 			</div>
 		</div>
 		<div id=homepage class=page>
